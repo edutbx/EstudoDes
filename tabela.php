@@ -9,28 +9,22 @@
         display: grid;
         grid-template-columns: repeat(14, auto);  
         grid-template-rows: repeat(10, auto);
-        
       }
-      #nome{
+      #titulo{
         background-color: white;
       }
       body{
-        background-color: aquamarine;
+        background-color: aqua;
       }
       #po{
         background-color: white;
-        grid-area: 2/2/11/7;
       }
       h1{
         text-align:center;
       }
-      h3{
-        margin-left: 30%;
-      }
       table, th, td {
+        border-collapse: collapse;
         border: 1px solid;
-      }
-      table{
         font-family: Arial;
       }
       .oi{
@@ -39,27 +33,30 @@
         #tab2{
         font-family: Arial;
         background-color: white;
-        grid-area: 2/8/5/14;
         }
-        .nome2{
-          background-color: blue;
+        #nome{
+          width: auto;
+          grid-area: 1/3/span 10/span 4;
+        }
+        #nome2{
+         width: auto;
+          grid-area: 1/10/span 1/ span 1;
+        }
+        td:hover{
+          background-color: lightblue;
         }
     </style>
-    <div id="nome">
+    <div id="titulo">
     <p>
       <b><h1>Tabelas</h1></b>
     </p>
     </div>
-    <p>
-      <b><h3>Tarde</h3></b>
-    </p>
-    <div id="nome2">
-    <p>
-      <b><h3>Noite</b></h3>
-    </p>
-    </div>
     <div id="container">
+    <div id="nome">
     <table id="po">
+    <p>
+      <b><h3>Período da tarde</h3></b>
+    </p>
   <tr>
     <th></th>
     <th>Data</th>
@@ -376,8 +373,11 @@
     <td><?php echo $professores[3];?></td>
   </tr>
 </table>
-
-
+    </div>
+        <div id="nome2">
+    <p>
+      <b><h3>Período da noite</b></h3>
+    </p>
 
 <table id="tab2">
     <tr>
@@ -516,7 +516,7 @@
   <tr>
     <td>Aula 1</td>
     <td>Quarta 14/09</td>
-    <td</td>
+    <td></td>
     <td><?php echo $professores[3];?></td>
     <td><?php echo $professores[1];?></td>
   </tr>
@@ -556,6 +556,7 @@
     <td><?php echo $professores[10];?></td>
   </tr>
     </table>
+    </div>
 </div>
 </body>
 </html>
